@@ -17,7 +17,6 @@ function App() {
                         <Route path='/' element={<Web/>} />
                         <Route path='admin/*' element={<Admin/>} />
                         <Route path='admin/login' element={<Login/>}/>
-                        .
                     </Routes>
                 </BrowserRouter>
             </div>
