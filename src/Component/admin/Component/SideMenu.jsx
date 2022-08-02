@@ -40,8 +40,7 @@ function SideMenu() {
                                 <span className="menu-arrow float-right"><AiOutlineLeft size={18}/></span>
                             </a>
                             <ul className="list-unstyled">
-                                <li><Link to='/admin/comments/comments'>پیام های خوانده نشده</Link></li>
-                                <li><Link to='/admin/comments/comments/all'>صندوق ورودی</Link></li>
+                                <li><Link to='/admin/comments/comments'>صندوق ورودی</Link></li>
                             </ul>
                         </li>
                         <li className={`has_sub ${toggle ? 'nav-active' : ''}`}>

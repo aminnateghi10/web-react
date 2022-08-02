@@ -1,5 +1,12 @@
-import React from "react";
+import React,{useEffect} from "react";
+import axios from "axios";
 function Panaelfa(){
+    useEffect(()=>{
+        axios.get('https://api-web.a-nateghi.ir/api/v1/information')
+            .then(res =>{
+                
+            })
+    },[])
     return(
         <div className='container'>
             <div>

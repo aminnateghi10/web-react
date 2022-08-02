@@ -19,7 +19,6 @@ function Admin(){
                     <Routes>
                         <Route path='/dashboard'  element={<Contentwrapper/>} />
                         <Route path='/comments'  element={<Contentwrapper/>} />
-                        <Route path='/comments/all'  element={<Contentwrapper/>} />
                         <Route path='/controlpanel/fa'  element={<Panaelfa/>} />
                         <Route path='/controlpanel/en'  element={<Contentwrapper/>} />
                     </Routes>
