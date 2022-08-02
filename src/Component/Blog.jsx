@@ -17,7 +17,7 @@ function Blog(){
                                         <span className="category">Reviews</span>
                                     </a>
                                     <a href="#">
-                                        <img src="http://a-nateghi.ir/images/blog/1.svg" alt="blog-title" />
+                                        <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2020/02/1.svg" alt="blog-title" />
                                     </a>
                                 </div>
                                 <div className="details">
@@ -39,7 +39,7 @@ function Blog(){
                                         <span className="category">Tutorial</span>
                                     </a>
                                     <a href="#">
-                                        <img src="http://a-nateghi.ir/images/blog/2.svg" alt="blog-title" />
+                                        <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2020/02/2.svg" alt="blog-title" />
                                     </a>
                                 </div>
                                 <div className="details">
@@ -61,7 +61,7 @@ function Blog(){
                                         <span className="category">Business</span>
                                     </a>
                                     <a href="#">
-                                        <img src="http://a-nateghi.ir/images/blog/3.svg" alt="blog-title" />
+                                        <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2020/02/3.svg" alt="blog-title" />
                                     </a>
                                 </div>
                                 <div className="details">

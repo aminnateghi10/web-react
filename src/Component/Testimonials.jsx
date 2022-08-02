@@ -3,15 +3,15 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import axios from "axios";
-import Service from '../State/Service/context.jsx'
-import {getData} from "../State/Service/actions.jsx";
+import clients from '../State/Client/context.jsx'
+import {getData} from "../State/Client/actions.jsx";
 
 function Testimonials(){
      let [loading , setloading] = useState(false)
-    const {state, dispatch} = useContext(Service)
+    const {state, dispatch} = useContext(clients)
 
     useEffect(()=>{
-        axios.get('https://api-web.a-nateghi.ir/api/v1/services')
+        axios.get('https://api-web.a-nateghi.ir/api/v1/clients')
             .then(res => {
                 dispatch(getData(res.data))
                 setloading(true)
@@ -28,29 +28,28 @@ function Testimonials(){
                         <section id="testimonials">
                             <div className="container">
                                 {/* section title */}
-                                <h2 className="section-title wow fadeInUp">Clients &amp; Reviews</h2>
+                                <h2 className="section-title wow fadeInUp">Clients & Reviews</h2>
                                 {/* testimonials wrapper */}
                                 <div className="testimonials-wrapper">
                                     {/* testimonial item */}
 
-
                                     <OwlCarousel  loop margin={10} items='1'>
+
                                         {
                                              state.data.map(item =>(
-                                                <div className='item'>
+                                                <div className='item' key={item.id}>
                                                     <div className="testimonial-item text-center mx-auto">
                                                         <div className="thumb mb-3 mx-auto">
-                                                            <img src={`https://api-web.a-nateghi.ir/${item.image}`} alt="customer-name" />
+                                                            <img src={`https://api-web.a-nateghi.ir/${item.img}`} alt="customer-name" />
                                                         </div>
-                                                        <h4 className="mt-3 mb-0">{item.title}</h4>
-                                                        <span className="subtitle">Product designer at Dribbble</span>
+                                                        <h4 className="mt-3 mb-0">{item.name}</h4>
+                                                        <span className="subtitle">{item.job}</span>
                                                         <div className="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
                                                             <p className="mb-0">{item.body}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                             ))
-                                            // console.log(state.data)
                                         }
 
                                     </OwlCarousel>
@@ -62,7 +61,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="../image/client-1.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-1-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +69,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-2.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-2-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +77,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-3.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-3-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +85,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-4.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-4-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -94,7 +93,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-5.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-5-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -102,7 +101,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-6.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-6-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +109,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-7.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-7-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +117,7 @@ function Testimonials(){
                                         {/* client item */}
                                         <div className="client-item">
                                             <div className="inner">
-                                                <img src="http://a-nateghi.ir/images/client-8.svg" alt="client-name" />
+                                                <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/client-8-1.svg" alt="client-name" />
                                             </div>
                                         </div>
                                     </div>

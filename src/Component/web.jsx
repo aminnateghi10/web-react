@@ -40,7 +40,7 @@ function Web() {
                 {/* section works */}
                 {/*<Works/>*/}
                 {/* section testimonials */}
-                {/*<Testimonials/>*/}
+                <Testimonials/>
                 {/* section blog */}
                 <Blog/>
                 {/* section contact */}
