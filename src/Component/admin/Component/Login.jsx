@@ -1,6 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
+import {useNavigate} from 'react-router-dom'
 import '../css/style.css'
+import axios from "axios";
 function Login(){
+        let navigate = useNavigate()
+    let [state , setstate] = useState({
+        username:'',
+        password:''
+    })
+    let PasswordUpdate = (e)=>{
+        setstate(prevState => {
+            return{
+                ...prevState,
+                password:e.target.value
+            }
+        })
+    }
+    let UsernameUpdate = (e)=>{
+
+        setstate(prevState => {
+            return{
+                ...prevState,
+                username:e.target.value
+            }
+        })
+    }
+    let SendRequest = (e)=>{
+        e.preventDefault();
+        axios.post('https://api-web.a-nateghi.ir/api/v1/login',{
+                email:state.username,
+                password:state.password
+        }).then(res =>{
+            localStorage.setItem('token',res.data.token)
+            navigate('/admin')
+        })
+    }
     return(
         <>
             <>
@@ -22,7 +56,7 @@ function Login(){
                         <i className="mdi mdi-home h1" />
                     </a>
                 </div>
-                <div className="account-pages">
+                <div className="account-pages" dir='rtl'>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-12">
@@ -35,24 +69,18 @@ function Login(){
                                                     <img
                                                         src="assets/images/logo_dark.png"
                                                         height={28}
-                                                        alt="logo"
-                                                    />
+                                                        alt="logo"/>
                                                 </a>
                                             </div>
                                         </div>
                                         <div className="p-2">
                                             <form
                                                 className="form-horizontal m-t-20"
-                                                action="https://themesdesign.in/zinzer_1/vertical-rtl/index.html"
+                                                onSubmit={SendRequest}
                                             >
                                                 <div className="form-group row">
                                                     <div className="col-12">
-                                                        <input
-                                                            className="form-control"
-                                                            type="text"
-                                                            required=""
-                                                            placeholder="نام کاربری"
-                                                        />
+                                                        <input className="form-control" onChange={UsernameUpdate} type="text" placeholder="نام کاربری"/>
                                                     </div>
                                                 </div>
                                                 <div className="form-group row">
@@ -60,7 +88,7 @@ function Login(){
                                                         <input
                                                             className="form-control"
                                                             type="password"
-                                                            required=""
+                                                            onChange={PasswordUpdate}
                                                             placeholder="رمز عبور"
                                                         />
                                                     </div>
@@ -84,10 +112,7 @@ function Login(){
                                                 </div>
                                                 <div className="form-group text-center row m-t-20">
                                                     <div className="col-12">
-                                                        <button
-                                                            className="btn btn-primary btn-block waves-effect waves-light"
-                                                            type="submit"
-                                                        >
+                                                        <button className="btn btn-primary btn-block waves-effect waves-light" type="submit" >
                                                             ورود
                                                         </button>
                                                     </div>

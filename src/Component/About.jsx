@@ -40,14 +40,9 @@ function About(){
                                                 {/* about text */}
                                                 <p>{getValue(state.information  , 'biography')}</p>
                                                 <div className="mt-3">
-                                                    <a href="#" className="btn btn-default">
-                                                        Download CV
-                                                    </a>
+                                                    <a href="#" className="btn btn-default">Download CV</a>
                                                 </div>
-                                                <div
-                                                    className="spacer d-md-none d-lg-none"
-                                                    data-height={30}
-                                                />
+                                                <div className="spacer d-md-none d-lg-none"/>
                                             </div>
                                             <div className="col-md-6">
                                                 {/* skill item */}
