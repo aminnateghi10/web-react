@@ -56,8 +56,7 @@ function Contact(){
             <div className="container">
                 {/* section title */}
                 <h2 className="section-title wow fadeInUp">Get In Touch</h2>
-                <div className="spacer" data-height={60} />
-                <div className="row">
+                <div className="row mt-5">
                     <div className="col-md-4">
                         {/* contact info */}
                         <div className="contact-info">
@@ -70,81 +69,40 @@ function Contact(){
                     </div>
                     <div className="col-md-8">
                         {/* Contact Form */}
-                        <form onSubmit={Submit} id="contact-form" className="contact-form mt-6" method="post"
-                              action="https://jthemes.net/themes/html/bolby/demo/form/contact.php">
-
+                        <form onSubmit={Submit} className="contact-form mt-6">
                             <div className="messages"></div>
-
                             <div className="row">
                                 <div className="column col-md-6">
-                                    {/*// <!-- Name input -->*/}
+                                    {/* <!-- Name input -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <input type="text" className="form-control" name="InputName" id="InputName"
-                                               placeholder="Your name" required="required"
-                                               data-error="Name is required."
-                                               onChange={UpdateName}
-                                        />
-                                            <div className="help-block with-errors">
-                                                <ul className="list-unstyled">
-                                                    <li>Name is required.</li>
-                                                </ul>
-                                            </div>
+                                        <input type="text" className="form-control" placeholder="Your name" onChange={UpdateName}/>
                                     </div>
                                 </div>
 
                                 <div className="column col-md-6">
-                                    {/*// <!-- Email input -->*/}
+                                    {/*<!-- Email input -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <input type="email" className="form-control" id="InputEmail" name="InputEmail"
-                                               placeholder="Email address" required="required"
-                                               data-error="Email is required. "
-                                               onChange={UpdateEmail}
-                                               />
-                                            <div className="help-block with-errors">
-                                                <ul className="list-unstyled">
-                                                    <li>Email is required.</li>
-                                                </ul>
-                                            </div>
+                                        <input type="email" className="form-control" placeholder="Email address" onChange={UpdateEmail}/>
                                     </div>
                                 </div>
 
                                 <div className="column col-md-12">
-                                    {/*// <!-- Email input -->*/}
+                                    {/* <!-- Subject input -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <input type="text" className="form-control" id="InputSubject"
-                                               name="InputSubject" placeholder="Subject" required="required"
-                                               onChange={UpdateSubject}
-                                               data-error="Subject is required."/>
-                                            <div className="help-block with-errors">
-                                                <ul className="list-unstyled">
-                                                    <li>Subject is required.</li>
-                                                </ul>
-                                            </div>
+                                        <input type="text" className="form-control" placeholder="Subject" onChange={UpdateSubject} />
                                     </div>
                                 </div>
-
                                 <div className="column col-md-12">
-                                    {/*// <!-- Message textarea -->*/}
+                                    {/*<!-- Message textarea -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <textarea name="InputMessage" onChange={UpdateBody} id="InputMessage" className="form-control"
-                                                  rows="5" placeholder="Message" required="required"
-                                                  data-error="Message is required."></textarea>
-                                        <div className="help-block with-errors">
-                                            <ul className="list-unstyled">
-                                                <li>Message is required.</li>
-                                            </ul>
-                                        </div>
+                                        <textarea onChange={UpdateBody} className="form-control" placeholder="Message" rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
-
-                            <button type="submit" name="submit" id="submit" value="Submit"
-                                    className="btn btn-default disabled">Send Message
-                            </button>
-                            {/*// <!-- Send Button -->*/}
-
-                        </form>
+                            {/*<!-- Send Button -->*/}
+                            <button type="submit" className="btn btn-default disabled">Send Message</button>
                         {/* Contact Form end */}
+                        </form>
                     </div>
                 </div>
             </div>
