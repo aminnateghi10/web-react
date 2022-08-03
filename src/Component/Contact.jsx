@@ -71,7 +71,7 @@ function Contact(){
                     <div className="col-md-8">
                         {/* Contact Form */}
                         <form onSubmit={Submit} id="contact-form" className="contact-form mt-6" method="post"
-                              action="https://jthemes.net/themes/html/bolby/demo/form/contact.php" noValidate="true">
+                              action="https://jthemes.net/themes/html/bolby/demo/form/contact.php">
 
                             <div className="messages"></div>
 

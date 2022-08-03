@@ -3,6 +3,7 @@ import {BrowserRouter,Routes , Route } from "react-router-dom";
 import '../css/style.css'
 import SideMenu from "./SideMenu.jsx";
 import Tapbar from "./Tapbar.jsx";
+import Comments from './Comments.jsx'
 // import 'react-bootstrap-icons/dist/icons/bootstrap'
 import Contentwrapper from "./Contentwrapper.jsx";
 import Panaelfa from "./Panaelfa.jsx";
@@ -18,7 +19,7 @@ function Admin(){
                     <Tapbar/>
                     <Routes>
                         <Route path='/dashboard'  element={<Contentwrapper/>} />
-                        <Route path='/comments'  element={<Contentwrapper/>} />
+                        <Route path='/comments'  element={<Comments/>} />
                         <Route path='/controlpanel/fa'  element={<Panaelfa/>} />
                         <Route path='/controlpanel/en'  element={<Contentwrapper/>} />
                     </Routes>

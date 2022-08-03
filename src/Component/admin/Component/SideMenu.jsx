@@ -17,7 +17,7 @@ function SideMenu() {
                 <div className="text-center">
 
                     <a href="index.html" className="logo">
-                        <img src="assets/images/logo_dark.png" height="20"alt="logo"/>
+                        <img src="assets/images/logo_dark.png" height="20" alt="logo"/>
                     </a>
                 </div>
             </div>
@@ -34,13 +34,13 @@ function SideMenu() {
                             </Link>
                         </li>
 
-                        <li onClick={(e => console.log(e.target))} className={`has_sub ${toggle ? 'nav-active' : ''}`}>
-                            <a onClick={Toggle}> <AiOutlineMessage size={20}/>
+                        <li  className={`has_sub ${toggle ? 'nav-active' : ''}`}>
+                            <a onClick={Toggle}>
                                 <span> پیام ها </span>
                                 <span className="menu-arrow float-right"><AiOutlineLeft size={18}/></span>
                             </a>
                             <ul className="list-unstyled">
-                                <li><Link to='/admin/comments/comments'>صندوق ورودی</Link></li>
+                                <li><Link to='/admin/comments'>صندوق ورودی</Link></li>
                             </ul>
                         </li>
                         <li className={`has_sub ${toggle ? 'nav-active' : ''}`}>
