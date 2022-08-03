@@ -2394,9 +2394,9 @@ body.dark .blog-page-section .blog-single {
   position: relative;
 }
 
-/**
- * Fade-zoom animation for first dialog
- */
+
+  /*Fade-zoom animation for first dialog*/
+
 /* start State */
 .my-mfp-zoom-in .zoom-anim-dialog {
   opacity: 0;
