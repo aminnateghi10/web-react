@@ -75,27 +75,27 @@ function Contact(){
                                 <div className="column col-md-6">
                                     {/* <!-- Name input -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <input type="text" className="form-control" placeholder="Your name" onChange={UpdateName}/>
+                                        <input type="text" className="form-control" placeholder="Your name" onChange={UpdateName} required/>
                                     </div>
                                 </div>
 
                                 <div className="column col-md-6">
                                     {/*<!-- Email input -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <input type="email" className="form-control" placeholder="Email address" onChange={UpdateEmail}/>
+                                        <input type="email" className="form-control" placeholder="Email address" onChange={UpdateEmail} required/>
                                     </div>
                                 </div>
 
                                 <div className="column col-md-12">
                                     {/* <!-- Subject input -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <input type="text" className="form-control" placeholder="Subject" onChange={UpdateSubject} />
+                                        <input type="text" className="form-control" placeholder="Subject" onChange={UpdateSubject} required  />
                                     </div>
                                 </div>
                                 <div className="column col-md-12">
                                     {/*<!-- Message textarea -->*/}
                                     <div className="form-group has-error has-danger">
-                                        <textarea onChange={UpdateBody} className="form-control" placeholder="Message" rows="5"></textarea>
+                                        <textarea onChange={UpdateBody} className="form-control" placeholder="Message" rows="5" required></textarea>
                                     </div>
                                 </div>
                             </div>

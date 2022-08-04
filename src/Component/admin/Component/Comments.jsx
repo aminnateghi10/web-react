@@ -12,9 +12,11 @@ function Comments(){
     let DeleteMassage = (item)=>{
         console.log(item)
         axios.delete(`https://api.a-nateghi.ir/api/v1/tickets/${item.id}`)
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-        // alert(item.body);
+            .then(res => {
+                 let newlist = state.data.filter(element=> element.id != item.id)
+                setstate({data: newlist})
+            })
+            .catch(err => alert(err.message) )        // alert(item.body);
     }
 
     useEffect(()=>{

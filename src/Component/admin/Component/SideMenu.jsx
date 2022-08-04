@@ -47,6 +47,7 @@ function SideMenu() {
                             <a className="waves-effect"><AiOutlineSetting size={20}/> <span> مدیریت / ویرایش </span>
                                 <span className="menu-arrow float-right"><AiOutlineLeft size={18}/> </span></a>
                             <ul className="list-unstyled">
+                                <li><Link to='/admin/service'>سرویس ها</Link></li>
                                 <li><Link to='/admin/controlpanel/fa'>پنل فارسی</Link></li>
                                 <li><Link to='/admin/controlpanel/en'> پنل اینگلیسی</Link></li>
                             </ul>

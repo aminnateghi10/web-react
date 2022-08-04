@@ -7,6 +7,7 @@ import Comments from './Comments.jsx'
 // import 'react-bootstrap-icons/dist/icons/bootstrap'
 import Contentwrapper from "./Contentwrapper.jsx";
 import Panaelfa from "./Panaelfa.jsx";
+import Service from "./Service.jsx";
 function Admin(){
     return(
         <div className="main fixed-left">
@@ -20,6 +21,7 @@ function Admin(){
                     <Routes>
                         <Route path='/dashboard'  element={<Contentwrapper/>} />
                         <Route path='/comments'  element={<Comments/>} />
+                        <Route path='/service'  element={<Service/>} />
                         <Route path='/controlpanel/fa'  element={<Panaelfa/>} />
                         <Route path='/controlpanel/en'  element={<Contentwrapper/>} />
                     </Routes>

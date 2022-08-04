@@ -75,19 +75,6 @@ function Panaelfa(){
                 </div>
             </div>
             <div>
-                <h3 className='text-center'>خدمات</h3>
-                <div>
-                    <div>
-                        <h4>انتخاب عکس</h4>
-                        <input type='file'/>
-                        <h4>انتخاب عنوان</h4>
-                        <input/>
-                        <h4>شرح عنوان</h4>
-                        <input/>
-                    </div>
-                </div>
-            </div>
-            <div>
                 <h3 className='text-center'>تجربه</h3>
                 <div className='d-flex justify-content-between'>
                     <div>
