@@ -3,10 +3,18 @@ import axios from "axios";
 
 function Comments(){
     let [state , setstate] = useState()
-    let [show , setshow] = useState(true)
     let [loading , setloading] = useState(false)
-    let  massage = ()=> {
-        setshow(!show)
+
+    let ShowMassage = (item)=>{
+        console.log(item)
+        alert(item.body);
+    }
+    let DeleteMassage = (item)=>{
+        console.log(item)
+        axios.delete(`https://api.a-nateghi.ir/api/v1/tickets/${item.id}`)
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+        // alert(item.body);
     }
 
     useEffect(()=>{
@@ -37,8 +45,8 @@ function Comments(){
                                 <h5 className='col-3'>{item.email}</h5>
                                 <h5 className='col-3'>{item.subject}</h5>
                                 <h5 className='col-3'>
-                                    <button className='p-1' onClick={massage} >نمایش متن</button>
-                                    <div className={`position-fixed ${show ? 'd-felx' : 'd-none'}`}>erter</div>
+                                    <button className='p-1 h6' onClick={()=>ShowMassage(item)} >نمایش متن</button>
+                                    <button className='p-1 h6 mx-1' onClick={()=>DeleteMassage(item)} >حذف پیام</button>
                                 </h5>
                             </div>
                             ))

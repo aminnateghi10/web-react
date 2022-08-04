@@ -1,15 +1,11 @@
 import React, {useContext, useEffect, useState} from "react";
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 import axios from "axios";
 import clients from '../State/Client/context.jsx'
 import {getData} from "../State/Client/actions.jsx";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import Slider from "react-slick";
 function Testimonials(){
      let [loading , setloading] = useState(false)
@@ -26,7 +22,7 @@ function Testimonials(){
     const settings = {
         dots: true,
         arrows:false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -48,28 +44,6 @@ function Testimonials(){
                                     {/* testimonial item */}
 
                                     <Slider className='text-center' {...settings}>
-                                        {
-                                            state.data.map(item =>(
-                                                <div className='item' key={item.id}>
-                                                    <div className="testimonial-item text-center mx-auto">
-                                                        <div className="thumb mb-3 mx-auto">
-                                                            <img src={`https://api-web.a-nateghi.ir/${item.img}`} alt="customer-name" />
-                                                        </div>
-                                                        <h4 className="mt-3 mb-0">{item.name}</h4>
-                                                        <span className="subtitle">{item.job}</span>
-                                                        <div className="bg-white padding-30 shadow-dark rounded triangle-top position-relative mt-4">
-                                                            <p className="mb-0">{item.body}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                    </Slider>
-
-
-                                    <OwlCarousel className='owl-theme' loop margin={10} items='1'>
-                                        {
-                                            <>
                                             {
                                                 state.data.map(item =>(
                                                     <div className='item' key={item.id}>
@@ -86,10 +60,7 @@ function Testimonials(){
                                                     </div>
                                                 ))
                                             }
-                                            </>
-                                        }
-
-                                    </OwlCarousel>
+                                    </Slider>
                                     {/* testimonial item */}
 
                                 </div>
