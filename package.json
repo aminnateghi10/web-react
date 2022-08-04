@@ -27,7 +27,8 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "vite": "^3.0.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",

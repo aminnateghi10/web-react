@@ -75,31 +75,6 @@ function Panaelfa(){
                 </div>
             </div>
             <div>
-                <h3 className='text-center'>تجربه</h3>
-                <div className='d-flex justify-content-between'>
-                    <div>
-                        <h4>انتخاب سال شروع</h4>
-                        <input/>
-                        <h4>انتخاب سال پایان</h4>
-                        <input/>
-                        <h4>عنوان مدرک</h4>
-                        <input/>
-                        <h4>شرح مدرک</h4>
-                        <input/>
-                    </div>
-                    <div>
-                        <h4>انتخاب سال شروع</h4>
-                        <input/>
-                        <h4>انتخاب سال پایان</h4>
-                        <input/>
-                        <h4>عنوان شغلی</h4>
-                        <input/>
-                        <h4>شرح شغل</h4>
-                        <input/>
-                    </div>
-                </div>
-            </div>
-            <div>
                 <h3 className='text-center'>کار های اخیر</h3>
             </div>
             <div>

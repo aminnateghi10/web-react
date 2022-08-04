@@ -22,11 +22,11 @@ function Services(){
                     <div className="container">
                         {/* section title */}
                         <h2 className="section-title wow fadeInUp">Services</h2>
-                        <div className="row mt-5">
+                        <div className="row">
 
                             {
                                 state.data.map((item , index) =>(
-                                    <div className="col-md-4" key={index}>
+                                    <div className="col-md-4 mt-5" key={index}>
                                         {/* service box */}
                                         <div className={`service-box rounded data-background padding-30 text-center text-light ${index % 2===0 ?'shadow-blue': 'shadow-pink'}`}
                                              data-color="#6C6CE5">

@@ -8,6 +8,7 @@ import Comments from './Comments.jsx'
 import Contentwrapper from "./Contentwrapper.jsx";
 import Panaelfa from "./Panaelfa.jsx";
 import Service from "./Service.jsx";
+import Experience from './Experience.jsx'
 function Admin(){
     return(
         <div className="main fixed-left">
@@ -22,6 +23,7 @@ function Admin(){
                         <Route path='/dashboard'  element={<Contentwrapper/>} />
                         <Route path='/comments'  element={<Comments/>} />
                         <Route path='/service'  element={<Service/>} />
+                        <Route path='/experience'  element={<Experience/>} />
                         <Route path='/controlpanel/fa'  element={<Panaelfa/>} />
                         <Route path='/controlpanel/en'  element={<Contentwrapper/>} />
                     </Routes>

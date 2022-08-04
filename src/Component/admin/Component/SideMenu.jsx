@@ -48,6 +48,7 @@ function SideMenu() {
                                 <span className="menu-arrow float-right"><AiOutlineLeft size={18}/> </span></a>
                             <ul className="list-unstyled">
                                 <li><Link to='/admin/service'>سرویس ها</Link></li>
+                                <li><Link to='/admin/experience'>تجربیات</Link></li>
                                 <li><Link to='/admin/controlpanel/fa'>پنل فارسی</Link></li>
                                 <li><Link to='/admin/controlpanel/en'> پنل اینگلیسی</Link></li>
                             </ul>
