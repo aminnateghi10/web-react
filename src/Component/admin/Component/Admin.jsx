@@ -11,6 +11,7 @@ import Service from "./Service.jsx";
 import Experience from './Experience.jsx'
 import Clients from "./Clients.jsx";
 import Skill from "./Skill.jsx";
+import Information from "./Information.jsx";
 function Admin(){
     return(
         <div className="main fixed-left">
@@ -23,13 +24,12 @@ function Admin(){
                     <Tapbar/>
                     <Routes>
                         <Route path='/dashboard'  element={<Contentwrapper/>} />
+                        <Route path='/information'  element={<Information/>} />
                         <Route path='/comments'  element={<Comments/>} />
                         <Route path='/skill'  element={<Skill/>} />
                         <Route path='/service'  element={<Service/>} />
                         <Route path='/experience'  element={<Experience/>} />
                         <Route path='/clients'  element={<Clients/>} />
-                        <Route path='/controlpanel/fa'  element={<Panaelfa/>} />
-                        <Route path='/controlpanel/en'  element={<Contentwrapper/>} />
                     </Routes>
 
 
