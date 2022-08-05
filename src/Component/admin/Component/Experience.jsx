@@ -70,6 +70,20 @@ function Experience(){
                     })
             })
     }
+
+    let  DeletaItem = (item)=>{
+        axios.delete(`https://api-web.a-nateghi.ir/api/v1/experiences/${item.id}`,
+            {headers:{'x-api-key': localStorage.getItem('token')}})
+            .then(res => {
+                setstate(prevState => {
+                  let newlist = prevState.data.filter(element => element.id != item.id)
+                    console.log(newlist)
+                    return{
+                        data:[...newlist]
+                    }
+                })
+            })
+    }
     return(
         <>
             {
@@ -106,7 +120,7 @@ function Experience(){
                                 <h5>{item.body}</h5>
                                 <h5>{item.start}</h5>
                                 <h5>{item.end}</h5>
-                                <button className='p-1'>حذف</button>
+                                <button className='p-1' onClick={()=>DeletaItem(item)}>حذف</button>
                             </div>
                         ))
                     }

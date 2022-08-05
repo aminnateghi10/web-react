@@ -24,6 +24,7 @@ function Admin(){
                         <Route path='/comments'  element={<Comments/>} />
                         <Route path='/service'  element={<Service/>} />
                         <Route path='/experience'  element={<Experience/>} />
+                        <Route path='/clients'  element={<Comments/>} />
                         <Route path='/controlpanel/fa'  element={<Panaelfa/>} />
                         <Route path='/controlpanel/en'  element={<Contentwrapper/>} />
                     </Routes>

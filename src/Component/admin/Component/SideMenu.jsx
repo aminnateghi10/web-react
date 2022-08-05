@@ -49,6 +49,7 @@ function SideMenu() {
                             <ul className="list-unstyled">
                                 <li><Link to='/admin/service'>سرویس ها</Link></li>
                                 <li><Link to='/admin/experience'>تجربیات</Link></li>
+                                <li><Link to='/admin/experience'>مشتریان و نظرات</Link></li>
                                 <li><Link to='/admin/controlpanel/fa'>پنل فارسی</Link></li>
                                 <li><Link to='/admin/controlpanel/en'> پنل اینگلیسی</Link></li>
                             </ul>
