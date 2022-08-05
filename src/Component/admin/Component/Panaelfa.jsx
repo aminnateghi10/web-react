@@ -50,11 +50,6 @@ function Panaelfa(){
                         <input type='file'/>
                     </div>
                     <div>
-                        <h4>عنوان مهارت و درصد</h4>
-                        <input/>
-                        <input type='range'/>
-                    </div>
-                    <div>
                         <h4>پروژه های تموم شده</h4>
                         <input/>
                     </div>
@@ -77,28 +72,7 @@ function Panaelfa(){
             <div>
                 <h3 className='text-center'>کار های اخیر</h3>
             </div>
-            <div>
-                <h3 className='text-center'>دوستان و نظرات</h3>
-                <div>
-                    <div>
-                        <h4>انتخاب پروفایل</h4>
-                        <input type='file'/>
-                    </div>
-                    <div>
-                        <h4>انتخاب نام</h4>
-                        <input/>
-                    </div>
-                    <div>
-                        <h4>انتخاب عنوان شغلی</h4>
-                        <input/>
-                    </div>
-                    <div>
-                        <h4>انتخاب توصیف</h4>
-                        <input/>
-                    </div>
 
-                </div>
-            </div>
             <div>
                 <h3 className='text-center'>تماس با من</h3>
                 <div>
