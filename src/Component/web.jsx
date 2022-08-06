@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from "react";
-import 'bootstrap/dist/css/bootstrap.css'
 import Navbar from "./Navbar.jsx";
 import Home from "./Home";
 import About from "./About";

@@ -1,6 +1,11 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap-grid.css';
+import Container from 'react-bootstrap/Container';
+import row from 'react-bootstrap/Row';
+import col from 'react-bootstrap/Col';
 import './css/simple-line-icons.css'
+import './css/bootstrap.min.css'
 import Web from "./Component/web.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Admin from "./Component/admin/Component/Admin.jsx";
