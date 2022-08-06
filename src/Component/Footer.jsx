@@ -4,7 +4,7 @@ function Footer(){
     return(
         <footer className="footer light">
             <div className="container">
-                <span className="copyright">© 2022 Amin Nateghi.</span>
+                <span className="copyright"> Amin Nateghi.</span>
             </div>
         </footer>
     )

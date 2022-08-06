@@ -7,8 +7,7 @@ function Blog(){
                 <div className="container">
                     {/* section title */}
                     <h2 className="section-title wow fadeInUp">Latest Posts</h2>
-                    <div className="spacer" data-height={60} />
-                    <div className="row blog-wrapper">
+                    <div className="row blog-wrapper mt-5">
                         <div className="col-md-4">
                             {/* blog item */}
                             <div className="blog-item rounded bg-white shadow-dark wow fadeIn">

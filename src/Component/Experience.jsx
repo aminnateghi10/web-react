@@ -28,8 +28,8 @@ function Services(){
                         <div className="container">
                             {/* section title */}
                             <h2 className="section-title wow fadeInUp">Experience</h2>
-                            <div className="row mt-5">
-                                <div className="col-md-6">
+                            <div className="row">
+                                <div className="col-md-6 mt-5">
                                     {/* timeline wrapper */}
                                     <div className="timeline edu bg-white rounded shadow-dark padding-30 overflow-hidden">
                                         {/* timeline item */}
@@ -50,7 +50,7 @@ function Services(){
                                         <span className="line" />
                                     </div>
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-md-6 mt-5">
                                     {/* responsive spacer */}
                                     <div className="spacer d-md-none d-lg-none" data-height={30} />
                                     {/* timeline wrapper */}

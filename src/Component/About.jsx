@@ -48,7 +48,7 @@ function About(){
                                                 {/* skill item */}
                                                 {
                                                     SkillState.data.map(item =>(
-                                                        <div className="skill-item mt-2" key={item.id}>
+                                                        <div className="skill-item mt-3" key={item.id}>
                                                             <div className="skill-info clearfix">
                                                                 <h4 className="float-right mb-3 mt-0">{item.title}</h4>
                                                                 <span className="float-left">{item.percent}%</span>
@@ -67,7 +67,7 @@ function About(){
                             {/* row end */}
                             <div className="spacer" data-height={70} />
                             <div className="row mt-5">
-                                <div className="col-md-3 col-sm-6">
+                                <div className="col-md-3 col-sm-6 mt-2">
                                     {/* fact item */}
                                     <div className="fact-item">
                                         <span className="icon icon-fire" />
@@ -80,7 +80,7 @@ function About(){
                                     </div>
                                     <div className="spacer d-md-none d-lg-none" data-height={30} />
                                 </div>
-                                <div className="col-md-3 col-sm-6">
+                                <div className="col-md-3 col-sm-6 mt-2">
                                     {/* fact item */}
                                     <div className="fact-item">
                                         <span className="icon icon-cup" />
@@ -93,7 +93,7 @@ function About(){
                                     </div>
                                     <div className="spacer d-md-none d-lg-none" data-height={30} />
                                 </div>
-                                <div className="col-md-3 col-sm-6">
+                                <div className="col-md-3 col-sm-6 mt-2">
                                     {/* fact item */}
                                     <div className="fact-item">
                                         <span className="icon icon-people" />
@@ -106,7 +106,7 @@ function About(){
                                     </div>
                                     <div className="spacer d-md-none d-lg-none" data-height={30} />
                                 </div>
-                                <div className="col-md-3 col-sm-6">
+                                <div className="col-md-3 col-sm-6 mt-2">
                                     {/* fact item */}
                                     <div className="fact-item">
                                         <span className="icon icon-badge" />
