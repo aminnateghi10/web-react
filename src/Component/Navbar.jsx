@@ -8,9 +8,9 @@ function Navbar() {
         <header className="desktop-header-3 light fixed-top">
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-dark">
-                <button onClick={toggleset} className="navbar-toggler bg-dark" data-target="#navbarNavDropdown" data-toggle="collapse"
-                        type="button">
-                    <span className="navbar-toggler-icon"></span></button>
+                <button onClick={toggleset} className="navbar-toggler bg-dark" type="button">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
                 <div className={`collapse navbar-collapse justify-content-center ${toggle ? 'show' : ''}`} >
                     <ul className="navbar-nav scrollspy">
                         <li className="nav-item">

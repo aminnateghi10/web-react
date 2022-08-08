@@ -8,7 +8,7 @@ function Services(){
     const {state, dispatch} = useContext(Service)
 
     useEffect(()=>{
-        axios.get('https://api-web.a-nateghi.ir/api/v1/services')
+        axios.get('api/v1/services')
             .then(res => {
                 dispatch(getData(res.data))
                 setloading(true)

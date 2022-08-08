@@ -8,7 +8,7 @@ function Skill(){
 
 
     useEffect(()=>{
-        axios.get('https://api-web.a-nateghi.ir/api/v1/skills')
+        axios.get('api/v1/skills')
             .then(res =>{
                 setstate(res.data);
                 setloading(true)
@@ -42,7 +42,7 @@ function Skill(){
 
     let AddItem = (e)=>{
         e.preventDefault()
-        axios.post('https://api-web.a-nateghi.ir/api/v1/skills' ,{
+        axios.post('api/v1/skills' ,{
             "title": additem.name,
             "percent": additem.percent,
             "meta": {
@@ -52,7 +52,7 @@ function Skill(){
         },{headers:{
                 'x-api-key': localStorage.getItem('token')
             }}).then(res =>{
-            axios.get('https://api-web.a-nateghi.ir/api/v1/skills')
+            axios.get('api/v1/skills')
                 .then(res =>{
                     setstate(res.data);
                 })
@@ -60,7 +60,7 @@ function Skill(){
     }
 
     let DelateITem = (item)=>{
-        axios.delete(`https://api-web.a-nateghi.ir/api/v1/skills/${item.id}`,{headers:{
+        axios.delete(`api/v1/skills/${item.id}`,{headers:{
                 'x-api-key': localStorage.getItem('token')
             }}).then(res =>{
                 let newlist = state.data.filter(element => element.id != item.id)

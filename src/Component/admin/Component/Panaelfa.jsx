@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 import axios from "axios";
 function Panaelfa(){
     useEffect(()=>{
-        axios.get('https://api-web.a-nateghi.ir/api/v1/information')
+        axios.get('api/v1/information')
             .then(res =>{
                 
             })

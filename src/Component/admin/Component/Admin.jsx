@@ -1,18 +1,23 @@
-import React from "react";
-import {BrowserRouter,Routes , Route } from "react-router-dom";
+import React, {useEffect} from "react";
+import {BrowserRouter,Routes , Route , useNavigate } from "react-router-dom";
 import '../css/style.css'
 import SideMenu from "./SideMenu.jsx";
 import Tapbar from "./Tapbar.jsx";
 import Comments from './Comments.jsx'
-// import 'react-bootstrap-icons/dist/icons/bootstrap'
 import Contentwrapper from "./Contentwrapper.jsx";
-import Panaelfa from "./Panaelfa.jsx";
 import Service from "./Service.jsx";
 import Experience from './Experience.jsx'
 import Clients from "./Clients.jsx";
 import Skill from "./Skill.jsx";
 import Information from "./Information.jsx";
 function Admin(){
+    let navigate = useNavigate()
+    useEffect(()=>{
+    if(localStorage.getItem('token') === null || localStorage.getItem('token').length === 0 ){
+        navigate('/admin/login')
+    }
+    },[])
+
     return(
         <div className="main fixed-left">
 
@@ -30,6 +35,7 @@ function Admin(){
                         <Route path='/service'  element={<Service/>} />
                         <Route path='/experience'  element={<Experience/>} />
                         <Route path='/clients'  element={<Clients/>} />
+                        <Route path='/*'  element={<h1>not defind</h1>} />
                     </Routes>
 
 

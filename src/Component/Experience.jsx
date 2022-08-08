@@ -10,7 +10,7 @@ function Services(){
 
     useEffect(()=>{
 
-        axios.get('https://api-web.a-nateghi.ir/api/v1/experiences')
+        axios.get('api/v1/experiences')
             .then(res =>{
                 dispatch(getData(res.data))
                 setloading(true)

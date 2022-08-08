@@ -7,7 +7,7 @@ function Clients(){
     const [additem , setadditem] = useState({})
 
     useEffect(()=>{
-      axios.get('https://api-web.a-nateghi.ir/api/v1/clients')
+      axios.get('/api/v1/clients')
           .then(res =>{
               setstate(res.data)
               setloading(true)
@@ -55,12 +55,12 @@ function Clients(){
         data.append('job', additem.job)
         data.append('body', additem.body)
 
-        axios.post('https://api-web.a-nateghi.ir/api/v1/clients', data ,
+        axios.post('/api/v1/clients', data ,
         {headers: {
             'x-api-key': localStorage.getItem('token'),
                 'Content-Type': 'application/x-www-form-urlencoded'
         }}).then(res => {
-            axios.get('https://api-web.a-nateghi.ir/api/v1/clients')
+            axios.get('/api/v1/clients')
                 .then(res =>{
                     setstate(res.data)
                 })
@@ -68,7 +68,7 @@ function Clients(){
     }
 
     let DeleteIem = (item)=>{
-        axios.delete(`https://api-web.a-nateghi.ir/api/v1/clients/${item.id}`,{headers:{
+        axios.delete(`/api/v1/clients/${item.id}`,{headers:{
                 'x-api-key': localStorage.getItem('token')
             }}).then(res => {
                 let newlist = state.data.filter(element => element.id != item.id)

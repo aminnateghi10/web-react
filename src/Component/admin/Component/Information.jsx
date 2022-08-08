@@ -7,7 +7,7 @@ function Information(){
     const [additem , setadditem] = useState()
 
     useEffect(()=>{
-      axios.get('https://api-web.a-nateghi.ir/api/v1/information')
+      axios.get('/api/v1/information')
           .then(res =>{
               setstate(res.data)
               setloading(true)
@@ -18,7 +18,7 @@ function Information(){
         let newlist = state.data.filter(element => item.id != element.id)
         let person = prompt("متن جدید را وارد کنید:", item.value);
         item ={...item , value:person.valueOf()}
-        axios.put(`https://api-web.a-nateghi.ir/api/v1/information/${item.id}`,{
+        axios.put(`/api/v1/information/${item.id}`,{
             grop:item.grop,
             key:item.key,
             value:person.valueOf()},{headers:{

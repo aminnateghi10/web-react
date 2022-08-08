@@ -27,7 +27,7 @@ function Login(){
     }
     let SendRequest = (e)=>{
         e.preventDefault();
-        axios.post('https://api-web.a-nateghi.ir/api/v1/login',{
+        axios.post('api/v1/login',{
                 email:state.username,
                 password:state.password
         }).then(res =>{

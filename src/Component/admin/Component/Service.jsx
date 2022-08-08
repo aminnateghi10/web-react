@@ -11,7 +11,7 @@ function Service(){
     })
 
     useEffect(()=>{
-      axios.get('https://api-web.a-nateghi.ir/api/v1/services')
+      axios.get('/api/v1/services')
           .then(res =>{
               setstate(res.data)
               setloading(true)
@@ -20,7 +20,7 @@ function Service(){
 
 
    let DeleteItem = (item)=>{
-        axios.delete(`https://api-web.a-nateghi.ir/api/v1/services/${item.id}`,{headers: {
+        axios.delete(`/api/v1/services/${item.id}`,{headers: {
             'x-api-key': localStorage.getItem('token')
             }
         }).then(res =>{
@@ -65,13 +65,13 @@ function Service(){
         data.append('file', additem.image)
         data.append('title', additem.title)
         data.append('body', additem.body)
-        axios.post('https://api-web.a-nateghi.ir/api/v1/services',data,
+        axios.post('/api/v1/services',data,
             {headers: {
                 'x-api-key': localStorage.getItem('token'),
                     'Content-Type': 'application/x-www-form-urlencoded'
             }}
         ).then(res=>{
-            axios.get('https://api-web.a-nateghi.ir/api/v1/services')
+            axios.get('/api/v1/services')
                 .then(res =>{
                     setstate(res.data)
                 })

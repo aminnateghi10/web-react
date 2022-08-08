@@ -9,7 +9,7 @@ function About(){
     let {state:SkillState, dispatch:SkillDispatch} = useContext(Skill)
     let [loading , setloading ] = useState(false)
     useEffect(()=>{
-        axios.get('https://api-web.a-nateghi.ir/api/v1/skills')
+        axios.get('api/v1/skills')
             .then(res =>{
                 res.data
                 SkillDispatch(getData(res.data))

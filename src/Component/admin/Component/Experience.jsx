@@ -7,7 +7,7 @@ function Experience(){
     const [loading , setloading] = useState(false)
 
     useEffect(()=>{
-      axios.get('https://api-web.a-nateghi.ir/api/v1/experiences')
+      axios.get('/api/v1/experiences')
           .then(res => {
               setstate(res.data)
               setloading(true)
@@ -56,7 +56,7 @@ function Experience(){
     }
     let AddItem = (e)=>{
         e.preventDefault()
-        axios.post('https://api-web.a-nateghi.ir/api/v1/experiences',{
+        axios.post('/api/v1/experiences',{
             "type": additem.type,
             "title": additem.title,
             "body": additem.body,
@@ -64,7 +64,7 @@ function Experience(){
             "end": additem.end
         },{headers:{'x-api-key': localStorage.getItem('token')}})
             .then(res =>{
-                axios.get('https://api-web.a-nateghi.ir/api/v1/experiences')
+                axios.get('/api/v1/experiences')
                     .then(res => {
                         setstate(res.data)
                     })
@@ -72,7 +72,7 @@ function Experience(){
     }
 
     let  DeletaItem = (item)=>{
-        axios.delete(`https://api-web.a-nateghi.ir/api/v1/experiences/${item.id}`,
+        axios.delete(`/api/v1/experiences/${item.id}`,
             {headers:{'x-api-key': localStorage.getItem('token')}})
             .then(res => {
                 setstate(prevState => {

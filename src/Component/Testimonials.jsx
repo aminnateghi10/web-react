@@ -12,7 +12,7 @@ function Testimonials(){
     const {state, dispatch} = useContext(clients)
 
     useEffect(()=>{
-        axios.get('https://api-web.a-nateghi.ir/api/v1/clients')
+        axios.get('api/v1/clients')
             .then(res => {
                 dispatch(getData(res.data))
                 setloading(true)
