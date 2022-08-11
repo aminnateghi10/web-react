@@ -39,7 +39,7 @@ function Information(){
 
                         {
                             state.data.map(item =>(
-                                <div className='mt-5 border p-4' key={item.id}>
+                                <div className='border p-4' key={item.id}>
                                     <h4>{item.key}</h4>
                                     <h4>{item.value}</h4>
                                     <button className='p-2' onClick={()=>EditItem(item)}>edit</button>

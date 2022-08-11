@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {BrowserRouter,Routes , Route , useNavigate } from "react-router-dom";
-import '../css/style.css'
+import '../css/style2.css'
 import loadable from '@loadable/component'
 const SideMenu = loadable(() => import('./SideMenu.jsx'))
 const Tapbar = loadable(() => import('./Tapbar.jsx'))
@@ -11,15 +11,7 @@ const Experience = loadable(() => import('./Experience.jsx'))
 const Clients = loadable(() => import('./Clients.jsx'))
 const Skill = loadable(() => import('./Skill.jsx'))
 const Information = loadable(() => import('./Information.jsx'))
-// import SideMenu from "./SideMenu.jsx";
-// import Tapbar from "./Tapbar.jsx";
-// import Comments from './Comments.jsx'
-// import Contentwrapper from "./Contentwrapper.jsx";
-// import Service from "./Service.jsx";
-// import Experience from './Experience.jsx'
-// import Clients from "./Clients.jsx";
-// import Skill from "./Skill.jsx";
-// import Information from "./Information.jsx";
+
 function Admin(){
     let navigate = useNavigate()
     useEffect(()=>{
@@ -29,7 +21,7 @@ function Admin(){
     },[])
 
     return(
-        <div className="main fixed-left">
+        <div className="main">
 
         <div id="wrapper">
         <SideMenu/>
@@ -38,7 +30,6 @@ function Admin(){
 
                     <Tapbar/>
                     <Routes>
-                        <Route path='/dashboard'  element={<Contentwrapper/>} />
                         <Route path='/information'  element={<Information/>} />
                         <Route path='/comments'  element={<Comments/>} />
                         <Route path='/skill'  element={<Skill/>} />
@@ -51,11 +42,6 @@ function Admin(){
 
 
                 </div>
-
-                <footer className="footer">
-                    © 1398 زینزر <span className="d-none d-md-inline-block"> - طراحی با <i
-                    className="mdi mdi-heart text-danger"></i> فارسی سازی توسط جعفر عباسی.</span>
-                </footer>
 
             </div>
 

@@ -4,6 +4,13 @@ function Navbar() {
     let toggleset = ()=>{
         settoggle(!toggle)
     }
+
+    function  smothScroll(e) {
+        e.preventDefault();
+        let element = document.querySelector(e.target.getAttribute('href'));
+        element && element.scrollIntoView({ behavior: "smooth", block: "start"});
+    }
+
     return (
         <header className="desktop-header-3 light fixed-top">
         <div className="container">
@@ -14,22 +21,22 @@ function Navbar() {
                 <div className={`collapse navbar-collapse justify-content-center ${toggle ? 'show' : ''}`} >
                     <ul className="navbar-nav scrollspy">
                         <li className="nav-item">
-                            <a className="nav-link" href="#home">Home</a>
+                            <a className="nav-link" onClick={smothScroll} href="#home">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" className="nav-link">About</a>
+                            <a href="#about" onClick={smothScroll} className="nav-link">About</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#services" className="nav-link">Services</a>
+                            <a href="#services" onClick={smothScroll} className="nav-link">Services</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#experience" className="nav-link">Experience</a>
+                            <a href="#experience" onClick={smothScroll} className="nav-link">Experience</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#works" className="nav-link">Works</a>
+                            <a href="#works" onClick={smothScroll} className="nav-link">Works</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#contact" className="nav-link">Contact</a>
+                            <a href="#contact" onClick={smothScroll} className="nav-link">Contact</a>
                         </li>
                     </ul>
                 </div>

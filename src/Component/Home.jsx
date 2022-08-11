@@ -22,7 +22,7 @@ function Home() {
     }, []);
 
     return (<>
-        <section className="home light d-flex align-items-center">
+        <section id="home" className="home light d-flex align-items-center">
             <div className="container">
                 {/* intro */}
                 <div className="intro">
