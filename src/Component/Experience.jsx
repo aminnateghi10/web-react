@@ -35,15 +35,15 @@ function Services(){
                                         {/* timeline item */}
 
                                         {
-                                            JobExperiences === null ? null:
-                                            JobExperiences.map((item , index)=>(
-                                                <div className="timeline-container wow fadeInUp" key={index}>
-                                                    <div className="content">
-                                                        <span className="time">{item.start}-{item.end}</span>
-                                                        <h3 className="title">{item.title}</h3>
-                                                        <p>{item.body}</p>
-                                                    </div>
-                                                </div>
+                                            EducationalExperiences === null ? null :
+                                            EducationalExperiences.map((item , index)=>(
+                                            <div className="timeline-container wow fadeInUp" key={index}>
+                                            <div className="content">
+                                            <span className="time">{item.start}-{item.end}</span>
+                                            <h3 className="title">{item.title}</h3>
+                                            <p>{item.body}</p>
+                                            </div>
+                                            </div>
                                             ))
                                         }
                                         {/* main line */}
@@ -57,16 +57,16 @@ function Services(){
                                     <div className="timeline exp bg-white rounded shadow-dark padding-30 overflow-hidden">
                                         {/* timeline item */}
                                         {
-                                            EducationalExperiences === null ? null :
-                                            EducationalExperiences.map((item , index)=>(
-                                            <div className="timeline-container wow fadeInUp" key={index}>
-                                                <div className="content">
-                                                    <span className="time">{item.start}-{item.end}</span>
-                                                    <h3 className="title">{item.title}</h3>
-                                                    <p>{item.body}</p>
-                                                </div>
-                                            </div>
-                                            ))
+                                            JobExperiences === null ? null:
+                                                JobExperiences.map((item , index)=>(
+                                                    <div className="timeline-container wow fadeInUp" key={index}>
+                                                        <div className="content">
+                                                            <span className="time">{item.start}-{item.end}</span>
+                                                            <h3 className="title">{item.title}</h3>
+                                                            <p>{item.body}</p>
+                                                        </div>
+                                                    </div>
+                                                ))
                                         }
                                         {/* main line */}
                                         <span className="line" />

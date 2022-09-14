@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {BrowserRouter,Routes , Route , useNavigate } from "react-router-dom";
-import '../css/style2.css'
+import '../css/style.css'
 import loadable from '@loadable/component'
 const SideMenu = loadable(() => import('./SideMenu.jsx'))
 const Tapbar = loadable(() => import('./Tapbar.jsx'))

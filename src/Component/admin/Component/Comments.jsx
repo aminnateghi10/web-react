@@ -41,7 +41,7 @@ function Comments(){
                         </div>
                         {
                             state.data.map((item , index) =>(
-                            <div className='d-flex'>
+                            <div className='d-flex' key={index}>
                                 <h5 className='col-1'>{index}</h5>
                                 <h5 className='col-2'>{item.name}</h5>
                                 <h5 className='col-3'>{item.email}</h5>

@@ -10,6 +10,7 @@ import RegisterContext from "./Component/RegisterContext.jsx";
 
 import axios from "axios";
 axios.defaults.baseURL="https://api-web.a-nateghi.ir"
+// axios.defaults.headers.post={'x-api-key': localStorage.getItem('token'),'Content-Type': 'application/x-www-form-urlencoded'}
 function App() {
     return (
         <RegisterContext>
