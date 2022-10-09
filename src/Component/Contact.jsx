@@ -43,7 +43,7 @@ function Contact(){
     }
     let Submit = (e)=>{
      e.preventDefault();
-     axios.post('api/v1/tickets',{
+     axios.post('https://api.a-nateghi.ir/api/v1/tickets',{
          name: state.name,
          email: state.email,
          subject: state.subject,

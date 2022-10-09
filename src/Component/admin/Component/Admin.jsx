@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import {BrowserRouter,Routes , Route , useNavigate } from "react-router-dom";
 import '../css/style.css'
 import loadable from '@loadable/component'
+import Dashboard from "./Dashboard";
 const SideMenu = loadable(() => import('./SideMenu.jsx'))
 const Tapbar = loadable(() => import('./Tapbar.jsx'))
 const Comments = loadable(() => import('./Comments.jsx'))
@@ -30,6 +31,7 @@ function Admin(){
 
                     <Tapbar/>
                     <Routes>
+                        <Route path='/dashboard'  element={<Dashboard/>} />
                         <Route path='/information'  element={<Information/>} />
                         <Route path='/comments'  element={<Comments/>} />
                         <Route path='/skill'  element={<Skill/>} />

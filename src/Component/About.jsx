@@ -8,6 +8,7 @@ function About(){
     let {state, dispatch} = useContext(Information)
     let {state:SkillState, dispatch:SkillDispatch} = useContext(Skill)
     let [loading , setloading ] = useState(false)
+
     useEffect(()=>{
         axios.get('api/v1/skills')
             .then(res =>{
@@ -16,6 +17,7 @@ function About(){
                 setloading(true)
             })
     },[])
+
     return(
         <>
             {
